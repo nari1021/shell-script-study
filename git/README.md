@@ -13,7 +13,7 @@
 
 ## Git Branch Convention
 
-![https://github.com/nari1021/study-log/tree/main/git/git-branch.png]
+![Git-branch-image](https://github.com/nari1021/study-log/tree/main/git/git-branch.png)
 
 1. main : 애플리케이션으로 출시될 수 있는 브랜치
 2. develop : 애플리케이션의 다음 버전을 개발하는 브랜치 (develop -> main)
