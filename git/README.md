@@ -1,6 +1,6 @@
 # Git Convention (깃 규칙)
 
-## Git Repository 이름 규칙
+## Git Repository Naming Convention
 
 1. Use lower case. 소문자를 사용하자.
 2. Use dashes. 하이픈(-)을 사용하자.
@@ -11,7 +11,19 @@
 
 </br>
 
-## Git Commit message 규칙
+## Git Branch Convention
+
+![https://github.com/nari1021/study-log/tree/main/git/git-branch.png]
+
+1. main : 애플리케이션으로 출시될 수 있는 브랜치
+2. develop : 애플리케이션의 다음 버전을 개발하는 브랜치 (develop -> main)
+3. feature : 애플리케이션의 기능을 개발하는 브랜치 (feature -> develop)
+4. release : 출시 버전을 준비하는 브랜치 (develop -> release -> main)
+5. hotfix : 긴급하게 버그를 수정하는 브랜치 (hotfix -> main)
+
+</br>
+
+## Git Commit message Convention
 
 ### 1. [type] title, subject
 
