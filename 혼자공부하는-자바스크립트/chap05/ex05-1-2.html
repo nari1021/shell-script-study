@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        /* 2-1 */
+        const max = function (array) {
+            let output = array[0];
+            
+            for (const i of array) {
+                if (output < i) {
+                    output = i;
+                }
+            }
+            return output;
+        }
+        console.log(max(1, 2, 3, 4));
+
+        /* 2-2 */
+        const max2 = function (...array) {
+            let output = array[0];
+
+            for (const i of array) {
+                if (output < i) {
+                    output = i;
+                }
+            }
+            return output;
+        }
+        console.log(max(1, 2, 3, 4));
+
+        /* 2-3 */
+        const max2 = function (number, ...array) {
+            let output;
+            let items;
+
+            if (Array.isArray(number)) {
+                output = number[0];
+                items = number;
+            }
+            else if (typeof(number) === 'number') {
+                output = number
+                items = array
+            }
+
+            for (const i of array) {
+                if (output < i) {
+                    output = i;
+                }
+            }
+            return output;
+        }
+        console.log(`max(배열): ${max([1, 2, 3, 4])}`);
+        console.log(`max(숫자, ...): ${max(1, 2, 3, 4)}`);
+    </script>
+</body>
+
+</html>
