@@ -1,4 +1,4 @@
-# 01. Leadership Principles
+# 01. [Leadership Principles](https://www.amazon.jobs/en/principles)
 
 1. 고객에 대한 깊은 관심 / Customer Obsession
    리더는 고객과 함께 시작하고 역방향으로 일한다. 그들은 고객의 신뢰를 얻고 유지하기 위해 열심히 일한다. 리더들은 경쟁사들에게 관심을 기울이지만, 그들은 고객에게 더 집중한다.
