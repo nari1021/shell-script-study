@@ -44,7 +44,8 @@
     리더들은 주의 깊게 듣고, 솔직하게 말하고, 다른 사람을 존중한다. 그들은 심지어 그렇게 하는 것이 난처하거나 어색할 때에도 목소리로 자기 비판을 한다.리더는 그들 또는 그들 팀의 체취에서 향수 냄새가 난다고 믿지 않는다. 그들은 그들 자신과 그들 팀을 최고의 팀과 비교해서 기준을 세운다.
     Leaders listen attentively, speak candidly, and treat others respectfully. They are vocally self-critical, even when doing so is awkward or embarrassing. Leaders do not believe their or their team’s body odor smells of perfume. They benchmark themselves and their teams against the best.
 
-12. Dive Deep
+12. 심층 조사 / Dive Deep
+    리더는 모든 수준에서 동작하고, 세부 사항에 대한 연결을 유지하고, 측정 기준과 개인적인 일화가 다르면 의심을 한다. 그들의 밑에는 어떤 임무도 없다.
     Leaders operate at all levels, stay connected to the details, audit frequently, and are skeptical when metrics and anecdote differ. No task is beneath them.
 
 13. Have Backbone; Disagree and Commit
