@@ -8,7 +8,7 @@ CloudFront 엣지 캐시에서 파일이 만료되기 전에 파일을 제거해
 
 - 엣지 캐시에서 파일을 무효화 한다.
   그 후, 사용자가 파일을 요청하면 최신 버전의 파일을 Origin에서 가져온다.
-- ## 파일 버전 관리를 사용하여 서로 다른 이름을 가진 여러 버전의 파일을 제공한다.
+- 파일 버전 관리를 사용하여 서로 다른 이름을 가진 여러 버전의 파일을 제공한다.
 
 > [동일한 파일 이름을 사용한 기존 콘텐츠 업데이트](https://docs.aws.amazon.com/ko_kr/AmazonCloudFront/latest/DeveloperGuide/UpdatingExistingObjects.html#ReplacingObjects)
 >
