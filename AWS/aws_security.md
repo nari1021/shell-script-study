@@ -1,7 +1,5 @@
 # AWS Security
 
-ANFW(AWS Network FireWall) 구성을 진행하고 결정되어 기존 서비스와의 중복, 충돌의 문제에 대한 가이드
-
 - 기능 비교
   - VPC 기본 기능으로 서브넷 NACL(차단) Instance 기반의 SecurityGroup(허용) 정책을 구성 할 수 있음
   - ANFW 에서는 정보보호 흐름 통제 기능으로서 StateLess(차단) / StateFull(허용) 정책을 구성 할 수 있음
