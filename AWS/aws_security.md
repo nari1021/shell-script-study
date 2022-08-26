@@ -1,0 +1,30 @@
+# AWS Security
+
+ANFW(AWS Network FireWall) 구성을 진행하고 결정되어 기존 서비스와의 중복, 충돌의 문제에 대한 가이드
+
+- 기능 비교
+  - VPC 기본 기능으로 서브넷 NACL(차단) Instance 기반의 SecurityGroup(허용) 정책을 구성 할 수 있음
+  - ANFW 에서는 정보보호 흐름 통제 기능으로서 StateLess(차단) / StateFull(허용) 정책을 구성 할 수 있음
+- 차이점
+  - VPC
+    - NACL : Subent 단위 통제, stateless, order 가능, 하지만 운용상 양방향 트래픽을 관리해야하는 overhead가 있어, 미사용을 원칙으로 함
+    - Security Group : Instance 단위 통제 이며, StateFull, ENI 기준 inspection하나, SG Rule이 많아질수록 performance에 영향을 줌
+    - NACL&SG 는 Server의 IPTables 비유 됨
+  - ANFW
+    - StateLess : VPC 레벨에서 차단할 대상을 정의하며, IP/Protocol/ServicePort/Flag 구성하여 Pass/ Deny 정의 가능
+    - StateFull : VPC 레벨의 5 Tuple/ Domain List/ IPS(Suricata) 정책을 구성하여 Pass/ Deny 정의 가능하며 양방향/단방향 구분 가능
+    - ANFW 는 기존의 NGFW 과 비유 됨
+- 적용 범위
+  - NCAL& Security Group
+    - 개별 적인 정책을 기준으로 서비스 범위와 특성에 따라서 다르게 적용해야 할 대상에 구성함
+    - Security Group 을 통하여 최소한의 인스턴스 레벨의 Common 정책을 도출
+    - NACL 은 핵심 서비스 영역에 대하여 WAF 를 구성할 경우 차단 할 IP Set 를 자동으로 구성하기 위한 작업에 사용
+  - ANFW
+    - 전사적인 Deny List(차단 정책 리스트)를 구성하여 StateLess 로 가장 앞단에서 차단할 수 있도록 구성
+    - StatFull 정책으로 전사적인 IPS Rule 를 적용하여 Anomaly / Pattern Detection 을 구성하여 보안위협에 대응
+- 고려 사항
+  - IPS Rule
+    - Managed Rule 의 적용 범위와 Vendor 지원 필요
+    - 당당자의 Rule set 구성 방법에 대한 기반 지식 필요
+  - 공통 정책 적용 방안
+    - FMG(Firewall Manager)를 통하여 ANFW & Security Group 에 대한 정책을 전사로 관리하고 배포/회수 전략 구성
