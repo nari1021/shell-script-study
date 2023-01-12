@@ -26,3 +26,9 @@ CloudFront 엣지 캐시에서 파일이 만료되기 전에 파일을 제거해
 6. 서명된 URL을 사용하는 경우 물음표(?) 앞의 URL 부분만 포함하여 파일을 무효화 합니다.
 
 [출처] [File Invalidation](https://docs.aws.amazon.com/ko_kr/AmazonCloudFront/latest/DeveloperGuide/Invalidation.html)
+
+## 3. Log 분석
+
+[ 참고자료 ]
+- [Enhanced CloudFront Logs, Now With Query Strings](https://aws.amazon.com/ko/blogs/aws/enhanced-cloudfront-logs-now-with-query-strings/)
+- [Cloudfront Log 파일 S3버킷에 날짜 경로로 저장하기](https://kim-dragon.tistory.com/160)
