@@ -32,3 +32,21 @@ CloudFront 엣지 캐시에서 파일이 만료되기 전에 파일을 제거해
 [ 참고자료 ]
 - [Enhanced CloudFront Logs, Now With Query Strings](https://aws.amazon.com/ko/blogs/aws/enhanced-cloudfront-logs-now-with-query-strings/)
 - [Cloudfront Log 파일 S3버킷에 날짜 경로로 저장하기](https://kim-dragon.tistory.com/160)
+
+## 4. Cache
+
+- 보통 Caching은 GET 요청에서만 사용된다.
+
+
+
+
+
+📌 CloudFront - S3 를 연결해서 사용할 때,
+CloudFront에서 지정해준 Cache-Control 과 S3에서 지정해주는 Cache-Control이 어떻게 다를까? 어떤 옵션이 더 우선순위가 높을까?
+
+1. public한 S3 Bucket을 만들어서 html 파일을 하나 올려서 public Object URL로 테스트
+  - 그냥 객체만 올려서 테스트해보면, Response header에 Cache-Control 이 빠져서 없다.
+  - html 파일에 메타데이터를 지정하여 `Cache-Control = no-store, must-revalidate` 를 넣어줘보니 Response header에 메타데이터로 지정한 Cache-Control 값이 나온다.
+
+2. CloudFront - S3 를 연결하여 테스트
+  - S3에는 
