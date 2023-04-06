@@ -17,3 +17,36 @@ AWS 서비스와 리소스에 대한 인가 기능을 제공하며, 어떤 IAM `
 - Action : 허용 혹은 차단하고자하는 접근 타입
 - Resource : 요청의 목적지가 되는 서비스
 - Condition : 명시된 조건 유효하다고 판단될 수 있는 조건
+
+
+## 2). Assume Role
+
+- Role > Trust relationships
+```json
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Effect": "Allow",
+            "Principal": {
+                "AWS": [
+                    "arn:aws:iam::012345678912:user/terraform"
+                ]
+            },
+            "Action": "sts:AssumeRole"
+        }
+    ]
+}
+```
+
+- User > Policy
+```json
+{
+    "Version": "2012-10-17",
+    "Statement": {
+        "Effect": "Allow",
+        "Action": "sts:AssumeRole",
+        "Resource": "arn:aws:iam::123456789012:role/AdminRole"
+    }
+}
+```
